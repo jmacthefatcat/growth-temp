@@ -1,0 +1,160 @@
+:root {
+  font-size: calc(0.5vw + 1rem);
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+a {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+a:hover {
+  background-color: var(--green);
+  border: var(--s-5) solid var(--white);
+}
+
+header {
+  background-position: right;
+  background-repeat: no-repeat;
+  background-image: url('../imgs/brain-bg.jpg');
+  background-color: var(--green);
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: var(--s);
+}
+
+.cover > * {
+  margin-top: var(--s);
+  margin-bottom: var(--s);
+}
+
+.cover > :first-child:not(.centered) {
+  margin-top: 0;
+}
+
+.cover > :last-child:not(.centered) {
+  margin-bottom: 0;
+}
+
+.cover > .centered {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.stack {
+  --space: var(--s);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+} 
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+.cluster {
+  overflow: hidden;
+}
+
+.cluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: calc(var(--s) / 2 * -1);
+}
+
+.cluster > * > * {
+  margin: calc(var(--s) / 2);
+}
+
+.center {
+  box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mindsets-box {
+  display: flex;
+  min-height: 100vh;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  background-color: var(--green);
+}
+
+.box {
+  padding: var(--s);
+}
+
+.box.invert {
+  color: var(--ivory);
+  background-color: var(--dark-grey);
+}
+
+.box.grow {
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--s) * -1);
+}
+
+.grid > * {
+  flex: 1 1 25%;
+  margin: var(--s);
+}
+
+.grid > .full-width {
+  flex-basis: 100%;
+}
+
+.grid > .half-width {
+  flex-basis: 50%;
+}
+
+.box.info-card {
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.growth-info-closed {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255,55,55,0.25);
+  color: var(--white);
+}
+
+.growth-info-open {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(55,55,55,0.75);
+  color: var(--white);
+}
+
+footer {
+  border-top: var(--s-2) solid currentColor;
+  margin: var(--s5) var(--s) var(--s);
+}
